@@ -6,11 +6,6 @@
 #define HEIGHT  100
 #define WIDTH   100
 
-struct dataPoints {
-    double *x;
-    double *y;
-}; typedef struct dataPoints dataPoints;
-
 void plotGraph(dataPoints inputData) {
     int i, j;
     for (i=0; i<HEIGHT; i++) {

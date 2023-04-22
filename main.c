@@ -14,7 +14,9 @@ int main() {
     fillMatrix(testMat);
     printMatrix(testMat);
 
-    printf("%d\n", factorial(1000));
+    dataPoints data;
+
+    plotGraph(data);
 
     return 0;
 }
