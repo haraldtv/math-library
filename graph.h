@@ -1,3 +1,6 @@
+#define HEIGHT 40
+#define WIDTH 150
+
 struct dataPoints {
     double *x;
     double *y;

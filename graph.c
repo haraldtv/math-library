@@ -3,18 +3,20 @@
 
 #include "graph.h"
 
-#define HEIGHT  100
-#define WIDTH   100
-
 void plotGraph(dataPoints inputData) {
     int i, j;
     for (i=0; i<HEIGHT; i++) {
         for (j=0; j<WIDTH; j++) {
-            if ((i == 0) || (i==HEIGHT) || (j == 0) || (j == WIDTH)) {
+            if ((i == 0) || (i == (HEIGHT-1)) || (j == 0) || (j == (WIDTH-1))) {
                 printf("*");
             }
-            printf("\n");
+            else if ((i == ( (HEIGHT/2)-1)) && (j == (( (WIDTH/2) - 1)))) {
+                printf("+");
+            }
+            else
+                printf(" ");
         }
+        printf("\n");
     }
     
 }
