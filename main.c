@@ -10,13 +10,13 @@
 int main() {
     printf("HelloWorrld!\n");
 
-    matrix testMat = newMatrix(2,2);
+    matrix testMat = newMatrix(3,3);
     fillMatrix(testMat);
     printMatrix(testMat);
+    printf("%f\n", determinant(testMat));
 
-    dataPoints data;
-
-    plotGraph(data);
+    //dataPoints data;
+    //plotGraph(data);
 
     return 0;
 }

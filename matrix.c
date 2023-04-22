@@ -43,13 +43,14 @@ double determinant(matrix tempMat) {
 matrix printMatrix(matrix tempMat) {
     int i, j;
 
-    printf("--\n");
+    printf("-%dx%d-\n", tempMat.rows, tempMat.columns);
     for (i=0;i<tempMat.rows;i++) {
         for (j=0;j<tempMat.columns;j++) {
-            printf("%d\n", tempMat.data[i][j]);
+            printf("%d  ", tempMat.data[j][i]);
         }
-        printf("--\n");
+        printf("\n");
     }
+    printf("-\n");
 }
 
 matrix addMat(matrix mat1, matrix mat2) {
