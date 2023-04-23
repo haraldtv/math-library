@@ -6,4 +6,4 @@ If using vscode on windows, just clone and run it in vscode
 ### Linux
 > gcc main.c matrix.c graph.c -o -lm math-library
 ### Mac
-> IF using gcc the snippet for linux should work
+If using gcc the snippet for linux should work
