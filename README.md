@@ -3,7 +3,7 @@ This is a simple math library with some functions i sometimes need. This library
 ## Compiling
 ### Windows
 If using vscode on windows, just clone and run it in vscode
-### Linux
+### Linux (gcc)
 > gcc main.c matrix.c graph.c -o -lm math-library
 ### Mac
 If using gcc the snippet for linux should work
