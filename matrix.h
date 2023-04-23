@@ -5,6 +5,7 @@ struct matrix {
 }; 
 typedef struct matrix matrix;
 
+void freeMatrix(matrix tempMat);
 
 matrix newMatrix(int rows, int colums);
 matrix fillMatrix(matrix tempMat);

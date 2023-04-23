@@ -15,6 +15,13 @@ matrix newMatrix(int rows, int columns) {
     return tempMat;
 }
 
+void freeMatrix(matrix tempMat) {
+    for (int i=0; i < tempMat.rows; i++) {
+        free(tempMat.data[i]);
+    }
+    free(tempMat.data);
+}
+
 matrix newMatrixMan(int rows, int columns, int );
 
 matrix fillMatrix(matrix tempMat) {
