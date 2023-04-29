@@ -8,9 +8,9 @@ matrix newMatrix(int rows, int columns) {
     matrix tempMat;
     tempMat.rows = rows;
     tempMat.columns = columns;
-    tempMat.data = malloc(rows*sizeof(int));
+    tempMat.data = malloc(rows*sizeof(double));
     for (i=0;i<rows;i++) {
-        *(tempMat.data + i) = malloc(columns * sizeof(int));
+        *(tempMat.data + i) = malloc(columns * sizeof(double ));
     }
     return tempMat;
 }
@@ -22,15 +22,28 @@ void freeMatrix(matrix tempMat) {
     free(tempMat.data);
 }
 
-matrix newMatrixMan(int rows, int columns, int );
-
 matrix fillMatrix(matrix tempMat) {
+    int i, j;
+    for (i=0;i<tempMat.rows;i++) {
+        for (j=0;j<tempMat.columns;j++) {
+            double input;
+            printf("Val %dx%d: ", i, j);
+            scanf("%lf", &input);
+            printf("\n%f\n", input);
+            tempMat.data[i][j] = input;
+            printf("\n");
+        }
+    }
+}
+
+matrix fillMatrixGen(matrix tempMat) {
     int i, j;
     int count = 1;
 
     for (i=0;i<tempMat.rows;i++) {
         for (j=0;j<tempMat.columns;j++) {
-            tempMat.data[i][j] = count;
+            tempMat.data[i][j] = (double)count;
+            printf("%lf\n", tempMat.data[i][j]);
             count++;
         }
     }
@@ -43,6 +56,13 @@ double determinant(matrix tempMat) {
         if (tempMat.rows == 2) {
             return (tempMat.data[0][0] * tempMat.data[1][1] - tempMat.data[0][1] * tempMat.data[1][0]);
         }
+        else if (tempMat.rows == 3) {
+            double a, b, c;
+            a = (tempMat.data[1][1] * tempMat.data[2][2] - tempMat.data[1][2] * tempMat.data[2][1]);
+            b = (tempMat.data[1][0] * tempMat.data[2][2] - tempMat.data[1][2] * tempMat.data[2][0]);
+            c = (tempMat.data[1][0] * tempMat.data[2][1] - tempMat.data[1][1] * tempMat.data[2][0]);
+            return (tempMat.data[0][0]*a - tempMat.data[0][1]*b + tempMat.data[0][2]*c);
+        }
     }
     printf("Dimension error.");
 }
@@ -53,7 +73,7 @@ matrix printMatrix(matrix tempMat) {
     printf("-%dx%d-\n", tempMat.rows, tempMat.columns);
     for (i=0;i<tempMat.rows;i++) {
         for (j=0;j<tempMat.columns;j++) {
-            printf("%d  ", tempMat.data[j][i]);
+            printf("%lf  ", tempMat.data[j][i]);
         }
         printf("\n");
     }

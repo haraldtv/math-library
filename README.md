@@ -7,3 +7,6 @@ If using vscode on windows, just clone and run it in vscode
 > gcc main.c matrix.c graph.c -o -lm math-library
 ### Mac
 If using gcc the snippet for linux should work
+
+## Specifications
+- The matrix struct stores its data as double

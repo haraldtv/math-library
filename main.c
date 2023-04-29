@@ -10,6 +10,8 @@
 int main() {
     printf("HelloWorrld!\n");
 
+    //double a = 36;
+    //printf("%d\n", (int)a);
     matrix testMat = newMatrix(3,3);
     fillMatrix(testMat);
     printMatrix(testMat);
