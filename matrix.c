@@ -67,6 +67,23 @@ double determinant(matrix tempMat) {
     printf("Dimension error.");
 }
 
+matrix transpose(matrix inputMat) {
+    matrix tempMat = newMatrix(inputMat.rows, inputMat.columns);
+    
+    if (inputMat.rows == inputMat.columns) {
+        if (inputMat.rows == 2) {
+            int i, j;
+            for (i=0; i<inputMat.rows; i++) {
+                for (j=0; j<inputMat.columns; j++) {
+                    tempMat.data[i][j] == inputMat.data[j][i];
+                }
+            }
+        }
+    }
+    inputMat = tempMat;
+    freeMatrix(tempMat);
+}
+
 matrix printMatrix(matrix tempMat) {
     int i, j;
 

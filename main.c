@@ -13,9 +13,11 @@ int main() {
     //double a = 36;
     //printf("%d\n", (int)a);
     matrix testMat = newMatrix(3,3);
-    fillMatrix(testMat);
+    fillMatrixGen(testMat);
     printMatrix(testMat);
     printf("%f\n", determinant(testMat));
+    testMat = transpose(testMat);
+    printMatrix(testMat);
 
     //dataPoints data;
     //plotGraph(data);

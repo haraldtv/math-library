@@ -11,8 +11,9 @@ matrix newMatrix(int rows, int colums);
 matrix fillMatrixGen(matrix tempMat);
 matrix fillMatrix(matrix tempMat);
 matrix printMatrix(matrix tempMat);
-matrix addMat(matrix mat1, matrix mat2);
 
+matrix addMat(matrix mat1, matrix mat2);
 double determinant(matrix tempMat);
+matrix transpose(matrix inputMat);
 
 int factorial(int n); 
