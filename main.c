@@ -9,7 +9,7 @@
 
 int main() {
     printf("HelloWorrld!\n");
-
+/*
     //double a = 36;
     //printf("%d\n", (int)a);
     matrix testMat = newMatrix(3,3);
@@ -18,8 +18,21 @@ int main() {
     printf("%f\n", determinant(testMat));
     testMat = transpose(testMat);
     printMatrix(testMat);
+    */
 
-    //dataPoints data;
+    dataPoints data = allocateDatapoints(10, 10);
+    
+    //Why does it not assign i???
+    for (int i = 0; i<10; i++) {
+        printf("\n");
+        printf("Debug:: %d - %f\n", i, (double)i);
+        data.x[i] = 3.23;
+        printf("\n");
+    }
+    for (int i = 0; i<10; i++) {
+        printf("Output:: %x - %f \n", data.x[i], data.x[i]);
+    }
+
     //plotGraph(data);
 
     return 0;

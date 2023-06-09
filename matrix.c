@@ -75,7 +75,7 @@ matrix transpose(matrix inputMat) {
             int i, j;
             for (i=0; i<inputMat.rows; i++) {
                 for (j=0; j<inputMat.columns; j++) {
-                    tempMat.data[i][j] == inputMat.data[j][i];
+                    tempMat.data[i][j] = inputMat.data[j][i];
                 }
             }
         }

@@ -3,6 +3,15 @@
 
 #include "graph.h"
 
+dataPoints allocateDatapoints(int xSize, int ySize) {
+    dataPoints data;
+
+    data.x = malloc(xSize * sizeof(double));
+    data.y = malloc(ySize * sizeof(double));
+
+    
+}
+
 void plotGraph(dataPoints inputData) {
     int i, j;
     for (i=0; i<HEIGHT; i++) {

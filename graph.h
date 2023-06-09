@@ -8,3 +8,4 @@ struct dataPoints {
 
 
 void plotGraph(dataPoints inputData);
+dataPoints allocateDatapoints(int xSize, int ySize);
