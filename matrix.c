@@ -116,6 +116,12 @@ matrix addMat(matrix mat1, matrix mat2) {
     printf("Matrix dimension error\n");
 }
 
+matrix nullMatrix() {
+    matrix tempMat = newMatrix(1,1);
+    tempMat.data = 0;
+    return tempMat;
+}
+
 int factorial(int n) {
     int i;
     int fact = 1;
