@@ -26,7 +26,7 @@ int main() {
     for (int i = 0; i<10; i++) {
         printf("\n");
         printf("Debug:: %d - %f\n", i, (double)i);
-        data.x[i] = 3.23;
+        data.x[i] = (3.23 + (double)i);
         printf("\n");
     }
     for (int i = 0; i<10; i++) {
