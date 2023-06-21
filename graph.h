@@ -2,6 +2,7 @@
 #define WIDTH 150
 
 struct dataPoints {
+    int size;
     double *x;
     double *y;
 }; typedef struct dataPoints dataPoints;

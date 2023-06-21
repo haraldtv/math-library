@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <curses.h>
 
 #include "graph.h"
 
@@ -12,19 +13,29 @@ dataPoints allocateDatapoints(int xSize, int ySize) {
 }
 
 void plotGraph(dataPoints inputData) {
-    int i, j;
-    for (i=0; i<HEIGHT; i++) {
-        for (j=0; j<WIDTH; j++) {
-            if ((i == 0) || (i == (HEIGHT-1)) || (j == 0) || (j == (WIDTH-1))) {
-                printf("*");
-            }
-            else if ((i == ( (HEIGHT/2)-1)) && (j == (( (WIDTH/2) - 1)))) {
-                printf("+");
-            }
-            else
-                printf(" ");
-        }
-        printf("\n");
+    int i;
+    int maxcols, maxlines;
+    
+    //Some initialization of ncurses
+    initscr();
+    cbreak();
+    noecho();
+    clear();
+
+    //Defines a usable max value for horizontal and vertical axis
+    maxlines = LINES - 1;
+    maxcols = COLS - 1;
+
+    //Need a function to normalize and scale the datapoints from inputData
+
+    //Prints the data
+    //WARNING! Input not scaled to size, and will most likely break
+    for (i=0; i<inputData.size; i++) {
+        mvaddch(inputData.y[i], inputData.x[i], '*');
     }
+
+    refresh();
+    getch();
+    endwin();
     
 }

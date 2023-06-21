@@ -12,6 +12,8 @@
                 "matrix.c",
                 "graph.c",
                 "-o",
+                "-lm",
+                "-lncurses",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],
             "options": {
