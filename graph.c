@@ -54,8 +54,10 @@ void normalizeData(dataPoints *inp) {
     maxY = maxValue(inp->size, inp->y);
 
     for (i=0; i < inp->size; i++) {
-        inp->y[i] = 
+        inp->y[i] = ( (inp->y[i] - minX) / (maxX - minX) );
+        inp->x[i] = ( (inp->x[i] - minY) / (maxY - minY) );
     }
+    
 }
 
 //Unsure if i want the function to take a dataset as input, or hardcode it to return min value for both inp.x and inp.y
