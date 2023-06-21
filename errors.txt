@@ -1,0 +1,27 @@
+matrix.c:37:1: warning: non-void function does not return a value [-Wreturn-type]
+}
+^
+matrix.c:50:1: warning: non-void function does not return a value [-Wreturn-type]
+}
+^
+matrix.c:68:1: warning: non-void function does not return a value in all control paths [-Wreturn-type]
+}
+^
+matrix.c:85:1: warning: non-void function does not return a value [-Wreturn-type]
+}
+^
+matrix.c:98:1: warning: non-void function does not return a value [-Wreturn-type]
+}
+^
+matrix.c:117:1: warning: non-void function does not return a value in all control paths [-Wreturn-type]
+}
+^
+6 warnings generated.
+graph.c:72:18: warning: equality comparison result unused [-Wunused-comparison]
+            temp == datalist[i];
+            ~~~~~^~~~~~~~~~~~~~
+graph.c:72:18: note: use '=' to turn this equality comparison into an assignment
+            temp == datalist[i];
+                 ^~
+                 =
+1 warning generated.

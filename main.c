@@ -27,10 +27,11 @@ int main() {
         printf("\n");
         printf("Debug:: %d - %f\n", i, (double)i);
         data.x[i] = (3.23 + (double)i);
+        data.y[i] = (double)i;
         printf("\n");
     }
     for (int i = 0; i<10; i++) {
-        printf("Output:: %x - %f \n", data.x[i], data.x[i]);
+        printf("Output:: %f - %f \n", data.x[i], data.y[i]);
     }
 
     //plotGraph(data);

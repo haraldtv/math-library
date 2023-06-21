@@ -8,7 +8,9 @@ dataPoints allocateDatapoints(int xSize, int ySize) {
     dataPoints data;
 
     data.x = (double*)malloc(xSize * sizeof(double));
-    data.y = malloc(ySize * sizeof(double));
+    data.y = (double*)malloc(ySize * sizeof(double));
+
+    return data;
 
 }
 
@@ -57,7 +59,7 @@ void normalizeData(dataPoints *inp) {
         inp->y[i] = ( (inp->y[i] - minX) / (maxX - minX) );
         inp->x[i] = ( (inp->x[i] - minY) / (maxY - minY) );
     }
-    
+
 }
 
 //Unsure if i want the function to take a dataset as input, or hardcode it to return min value for both inp.x and inp.y
@@ -79,7 +81,7 @@ double maxValue(int size, double *datalist) {
     temp = datalist[0];
     for (i=0; i<size; i++) {
         if (temp < datalist[i]) {
-            temp == datalist[i];
+            temp = datalist[i];
         }
     }
     return temp;

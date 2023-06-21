@@ -9,11 +9,13 @@
                 "-fansi-escape-codes",
                 "-g",
                 "${file}",
+                "main.c",
                 "matrix.c",
                 "graph.c",
                 "-o",
                 "-lm",
                 "-lncurses",
+                "-lpanel",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],
             "options": {
