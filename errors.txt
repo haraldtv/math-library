@@ -17,11 +17,3 @@ matrix.c:117:1: warning: non-void function does not return a value in all contro
 }
 ^
 6 warnings generated.
-graph.c:72:18: warning: equality comparison result unused [-Wunused-comparison]
-            temp == datalist[i];
-            ~~~~~^~~~~~~~~~~~~~
-graph.c:72:18: note: use '=' to turn this equality comparison into an assignment
-            temp == datalist[i];
-                 ^~
-                 =
-1 warning generated.

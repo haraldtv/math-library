@@ -29,6 +29,10 @@ void plotGraph(dataPoints inputData) {
     maxcols = COLS - 1;
 
     //Need a function to normalize and scale the datapoints from inputData
+    normalizeData(&inputData);
+
+    //Scales data to the size of the terminal
+    scaleData(&inputData, maxlines, maxcols);
 
     //Prints the data
     //WARNING! Input not scaled to size, and will most likely break (most likely as in absolutely)
@@ -36,7 +40,7 @@ void plotGraph(dataPoints inputData) {
         mvaddch(inputData.y[i], inputData.x[i], '*');
     }
 
-    refresh();
+    //refresh();
     getch();
     endwin();
     
@@ -69,7 +73,7 @@ double minValue(int size, double *datalist) {
     temp = datalist[0];
     for (i=0; i<size; i++) {
         if (temp > datalist[i]) {
-            temp == datalist[i];
+            temp = datalist[i];
         }
     }
     return temp;
@@ -85,4 +89,13 @@ double maxValue(int size, double *datalist) {
         }
     }
     return temp;
+}
+
+
+scaleData(dataPoints *inp, maxlines, maxcols) {
+    int i;
+    int size = inp->size;
+    for (i=0;i<size;i++) {
+
+    })
 }
