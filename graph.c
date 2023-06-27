@@ -92,10 +92,11 @@ double maxValue(int size, double *datalist) {
 }
 
 
-scaleData(dataPoints *inp, maxlines, maxcols) {
+void scaleData(dataPoints *inp, int maxlines, int maxcols) {
     int i;
     int size = inp->size;
     for (i=0;i<size;i++) {
-
-    })
+        inp->x[i] = inp->x[i] * maxlines;
+        inp->y[i] = inp->y[i] * maxcols;
+    }
 }
