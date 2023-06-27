@@ -3,8 +3,8 @@
 #include <stdint.h>
 
 #include "defenitions.h"
-#include "matrix.h"
-#include "graph.h"
+#include "./headers/matrix.h"
+#include "./headers/graph.h"
 
 int main()
 {

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <curses.h>
 
-#include "graph.h"
+#include "./headers/graph.h"
 
 dataPoints allocateDatapoints(int xSize, int ySize) {
     dataPoints data;
@@ -91,7 +91,8 @@ double maxValue(int size, double *datalist) {
     return temp;
 }
 
-
+//This function scales the data to the maxlines and maxcols variables, so the graph will scale to the size of the terminal
+//WARNING! Data should be normalized first using normalizeData() or some other method
 void scaleData(dataPoints *inp, int maxlines, int maxcols) {
     int i;
     int size = inp->size;

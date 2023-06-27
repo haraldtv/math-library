@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "matrix.h"
+#include "./headers/matrix.h"
 
 matrix newMatrix(int rows, int columns) {
     int i;
